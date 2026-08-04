@@ -1,26 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>MRIt</title>
-</head>
-<body>
-  <iframe 
-    src="https://script.google.com/macros/s/AKfycbw09MiB57nluNIj9G1eeE9pEm4BkpOkjosVHM2sybmFksSbKnyIhQSLyiIMQmb4pry7zw/exec"
-    width="100%"
-    height="100%"
-    allowfullscreen="true"
-    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-  </iframe>
+  <meta charset="UTF-8">
 
-  <script>
-    window.onload = function() {
-      document.querySelector('iframe')
-        .requestFullscreen()
-        .catch((err) => {
-          console.error('Error attempting to enable full-screen mode:', err.message);
-        });
-    };
-  </script>
+  <!-- Makes the page adapt correctly to phones and tablets -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>Mulunda TV</title>
+
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    #appFrame {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      margin: 0;
+      padding: 0;
+      border: none;
+      display: block;
+      background: #000;
+    }
+
+    /* Phone in portrait mode */
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+      #appFrame {
+        width: 100vw;
+        height: 100dvh;
+      }
+    }
+
+    /* Phone or tablet in landscape mode */
+    @media screen and (orientation: landscape) {
+      #appFrame {
+        width: 100vw;
+        height: 100dvh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <iframe
+    id="appFrame"
+    src="https://script.google.com/macros/s/AKfycbw09MiB57nluNIj9G1eeE9pEm4BkpOkjosVHM2sybmFksSbKnyIhQSLyiIMQmb4pry7zw/exec"
+    title="Mulunda TV"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen
+  ></iframe>
 </body>
 </html>
-        
