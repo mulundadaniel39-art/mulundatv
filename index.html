@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- Makes the page adapt correctly to phones and tablets -->
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
@@ -36,7 +35,6 @@
       background: #000;
     }
 
-    /* Phone in portrait mode */
     @media screen and (max-width: 768px) and (orientation: portrait) {
       #appFrame {
         width: 100vw;
@@ -44,7 +42,6 @@
       }
     }
 
-    /* Phone or tablet in landscape mode */
     @media screen and (orientation: landscape) {
       #appFrame {
         width: 100vw;
@@ -59,7 +56,7 @@
     id="appFrame"
     src="https://script.google.com/macros/s/AKfycbxHWRAZALiku7FOoCNp7l-QPVQ3SITwlTyiakn81dFQLWiqQiwyZaNofPQEAi4gfjXKfg/exec"
     title="Mulunda TV"
-    allow="autoplay; fullscreen; picture-in-picture"
+    allow="camera https://script.google.com https://script.googleusercontent.com https://*.googleusercontent.com; autoplay; fullscreen; picture-in-picture"
     allowfullscreen
   ></iframe>
 </body>
